@@ -11,22 +11,22 @@ id_pattern = re.compile(r'^.\d+$')
 
 # Bot information
 SESSION = environ.get('SESSION', 'TechVJBot')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
-BOT_TOKEN = environ.get('BOT_TOKEN', "")
+API_ID = int(environ.get('API_ID', '4888662'))
+API_HASH = environ.get('API_HASH', 'a1279769bf0fd2acd536cfc04c9ead5c')
+BOT_TOKEN = environ.get('BOT_TOKEN', "7627474917:AAGHgoh7AW2q21m_Wj2okcIamKRkFxtEQ84")
 
 
 # This Pictures Is For Start Message Picture, You Can Add Multiple By Giving One Space Between Each.
-PICS = (environ.get('PICS', 'https://graph.org/file/ce1723991756e48c35aa1.jpg')).split()
+PICS = (environ.get('PICS', 'https://telegra.ph/file/0466e814497abe63ce880.jpg https://telegra.ph/file/960068f96dd2e43ceb4d7.jpg https://telegra.ph/file/d29b4c6fcb0642df19eaa.jpg https://telegra.ph/file/62c40feec87b56994761a.jpg https://telegra.ph/file/af14212be3b6c00b070b5.jpg https://telegra.ph/file/76f8e349891df5ef5ef55.jpg https://telegra.ph/file/5d95ff2a9749af464e490.jpg https://telegra.ph/file/5921600c300fb1dc7ae02.jpg https://telegra.ph/file/dfaa738e91a2cc3d17bc8.jpg')).split()
 
 
 # Admins & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()] # For Multiple Id Use One Space Between Each.
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '677605082').split()] # For Multiple Id Use One Space Between Each.
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]  # For Multiple Id Use One Space Between Each.
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
 # This Channel Is For When User Start Your Bot Then Bot Send That User Name And Id In This Log Channel, Same For Group Also.
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '1002877329639'))
 
 # This Is File Channel Where You Upload Your File Then Bot Automatically Save It In Database 
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]  # For Multiple Id Use One Space Between Each.
